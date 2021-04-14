@@ -1,0 +1,365 @@
+/* Css Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Dark/Light Toggle */
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #0a0d14;
+    --font-color: #595964;
+    --bg-color: #171722;
+    --heading-color: #818cab;
+  }
+  
+  .container {
+  background-color: var( --bg-color);
+  color: var(--font-color);
+
+  /*styles tambahan*/
+  /* position: absolute; */
+
+}
+  
+  /* h1 {
+    color: var(--secondary-color);
+  
+   
+    
+  } */
+  
+  a {
+    color: var(--primary-color);
+  
+    /*styles tambahan*/
+    
+  }
+  
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    float: left;
+    position: absolute;
+    top: 18px;
+    right: 0%;
+    right: 100px;
+  }
+    em {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  .round {
+      display: inline-block;
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+    
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .theme-switch-wrapper {  
+    margin: auto;
+    /* display: inline-block; */
+    text-align: center;
+    /* background-color: blueviolet; */
+    float: right;
+    position: absolute;
+    /* background-color: blueviolet; */
+  }
+  
+  
+
+/* Css Style */
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #726e6e;
+    
+}
+.top-bar {
+    width: 100%;
+    height: 80px;
+    background-color: #4d4d4d;
+    margin-bottom: -100px;
+    position: fixed;
+    margin-top: -100;
+    z-index: 1;
+    top: 0;
+   border-bottom: #a8a79f solid 5px;
+}
+.top-bar h1 {
+    color: silver;
+    font-size: 30px;
+    line-height: 80px;
+    /* width: 60%; */
+    margin-left: 350px;
+    display: inline-block;
+    /* background-color: slateblue; */
+    font-weight: bold;
+    /* margin: auto; */
+    width: max-content;
+    /* display: inline-block; */
+    text-align: center;
+}
+.top-bar b {
+    display: inline-block;
+    margin-top: 10px;
+    /* background-color: blueviolet; */
+    width: 90px;
+    position: relative;
+    right: -65px;
+    top: -30px;
+    font-weight: bolder;
+}
+.container {
+    width: 1000px;
+    /* height: 800px; */
+    /* background-color: white; */
+    margin:  auto;
+    margin-top: 85px;
+    /* border-top: silver solid 5px; */
+    /* position: relative; */
+    /* box-sizing: border-box; */
+    /* border: silver solid 5px */
+    margin-bottom: 0;
+}
+.header {
+    padding: 20px;
+}
+.header .judul {
+    margin-top: 10px;
+    /* background-color: yellow; */
+    text-align: center;
+    /* display: block; */
+    font-size: 30px;
+    font-weight: bold;
+    color: (--font-color);
+}
+.penulis {
+    text-align: center;
+    /* font-weight: bold; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.navbar {
+    margin: auto;
+    /* background-color: rgb(94, 86, 86); */
+    margin-top: 5px;
+}
+.navbar ul li {
+    display: inline-block;
+    text-align: center;
+    /* background-color: rgb(48, 48, 61); */
+    margin-right: 0;
+}
+.navbar ul .first {
+    margin-left: 340px;
+}
+.navbar a {
+    color: #6b695e;
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar a:hover {
+    background-color: black;
+    color: rgb(206, 212, 218);
+}
+.banner {
+  background-image: url(img/Lauterbrunnen-valley.jpg);
+  background-size: 100% 450px;
+  width: 100%;
+  height: 450px;
+  border-top: silver 5px solid;
+  border-bottom: #292922 5px solid;  
+}
+
+.content {
+  margin: 15px;
+}
+
+.content .main {
+  float: left;
+  /* background-color: #f0cbcb; */
+  width: 500px;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.content .main .judul {
+  font-weight: bold;
+  font-size: 30px;
+  /* margin: 15px; */
+  margin-bottom: 8px;
+}
+
+.content .main .penulis {
+  text-align: left;
+  font-size: 13px;
+}
+
+.content .main a {
+  color: #a7a1a1;
+  text-decoration: none;
+}
+
+.content .main a:hover {
+  background-color: white;
+  color: #0a0d14;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+ 
+.container .content .writer {
+  /* background-color: #c0bff8; */
+  width: 400px;
+  height: max-content;
+  float: right;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.container .content .writer img{
+  float: left;
+  margin: 10px;
+  margin-right: 18px;
+}
+
+.container .content .writer h1 {
+  font-weight: bold;
+}
+
+.container .footer {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(27, 26, 26);
+  margin-top: 100px;
+}
+
+.container .footer p {
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+}
+

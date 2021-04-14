@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerapan Semua Ilmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+    <h1>Hallo Selamat Datang di Website Kami<h1></h1>        
+        <div class="theme-switch-wrapper">
+           <br>
+            <label class="theme-switch" for="checkbox"> 
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+         <br>
+         <b>Dark Mode</b>
+            
+          </div>
+           
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1 class="judul">Ujian Akhir CSS Layouting</h1>
+            <p class="penulis">
+                Oleh: Budi Setiawan
+            </p>
+          <div class="navbar">
+            <ul>
+                <li class="first"><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">products</a></li>
+                <li><a href="#">service</a></li>                   <li><a href="#">contact</a></li>
+            </ul>   
+          </div>
+        </div>
+        <div class="banner">
+
+        </div>
+        <div class="content cf">
+            <div class="main ">
+                <h1 class="judul">Harapan Akan Masa Depan</h1>
+                <p class="penulis">ditulis oleh <a href="#">budi Setiawan</a> pada 25 Maret 2021</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odit consectetur minus ut molestias sapiente optio possimus amet, pariatur ipsa.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, similique culpa? Quia facere quibusdam numquam eum modi, delectus provident praesentium nisi minus id recusandae quasi error nesciunt odit, dolorum minima beatae ea. Inventore suscipit, illum reiciendis porro impedit itaque eveniet aperiam nemo similique corrupti dolor repudiandae qui, ipsum beatae? Accusantium!</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, veritatis voluptatibus ipsa eos consequuntur corporis mollitia nam officia a possimus aliquam accusantium minima consequatur eum qui nesciunt, iure sunt. Aliquam delectus sequi, tenetur nulla modi eos doloremque soluta possimus saepe magnam eum voluptates aperiam recusandae et mollitia perferendis quis nemo consequuntur in iusto minima nobis, quaerat nostrum nesciunt! Voluptatum culpa recusandae soluta blanditiis asperiores et provident deserunt, dignissimos perspiciatis eum doloribus dolores saepe debitis vero. Natus excepturi dolor quisquam labore.</p>
+            </div>
+            <div class="writer">
+                <h1>Tentang Penulis</h1>
+                <img src="img/logo.png" alt="logo penulis" title="logo penulis" height="80px">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, porro neque ullam quam sunt ducimus maxime facilis repellendus mollitia dignissimos dolores dolore, harum nostrum rem tenetur enim commodi impedit vero possimus. Ducimus quae, quaerat nostrum sapiente explicabo dolor culpa repellendus consectetur ipsam ad officiis cum repellat eum. Dolorum soluta dolores voluptas ducimus quos perferendis repudiandae facilis assumenda. Exercitationem hic dolorem possimus, quod vero sed non, quasi ratione sequi consequuntur perferendis voluptates, vel atque nihil id reprehenderit est quo quos at!</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+
+                Copyright 2021. budisetiawan
+                </p>
+        </div>
+    </div>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+ 
+ function switchTheme(e) {
+     if (e.target.checked) {
+         document.documentElement.setAttribute('data-theme', 'dark');
+     }
+     else {
+         document.documentElement.setAttribute('data-theme', 'light');
+     }    
+ }
+ 
+ toggleSwitch.addEventListener('change', switchTheme, false);
+ function switchTheme(e) {
+     if (e.target.checked) {
+         document.documentElement.setAttribute('data-theme', 'dark');
+         localStorage.setItem('theme', 'dark'); //add this
+     }
+     else {
+         document.documentElement.setAttribute('data-theme', 'light');
+         localStorage.setItem('theme', 'light'); //add this
+     }    
+ }
+ const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+ 
+ if (currentTheme) {
+     document.documentElement.setAttribute('data-theme', currentTheme);
+ 
+     if (currentTheme === 'dark') {
+         toggleSwitch.checked = true;
+     }
+ }
+    </script>
+</body>
+</html>
